@@ -1,0 +1,828 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.hero-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    gap: 60px;
+}
+
+.hero-content {
+    color: white;
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.highlight {
+    color: #ffd700;
+    display: block;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.hero-features {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.feature-icon {
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    background: #ffd700;
+    color: #1a1a1a;
+    border: none;
+    padding: 18px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Hero Visuals */
+.hero-visuals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero-visual {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-visual:hover {
+    transform: translateY(-5px);
+}
+
+/* Debt Visualization */
+.debt-visualization {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.debt-before,
+.debt-after {
+    text-align: center;
+    color: white;
+}
+
+.debt-amount {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.debt-after .debt-amount {
+    color: #4ade80;
+}
+
+.debt-label {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* Process Visualization */
+.process-visualization {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.process-step {
+    text-align: center;
+    color: white;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffd700;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 auto 8px;
+}
+
+.step-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Guarantee Visualization */
+.guarantee-visualization {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.guarantee-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.guarantee-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.guarantee-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.guarantee-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    line-height: 1.3;
+}
+
+/* Chat Section */
+.chat-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.chat-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.chat-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+}
+
+.chat-subtitle {
+    font-size: 1.2rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.chat-window {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.chat-messages {
+    height: 500px;
+    overflow-y: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message {
+    display: flex;
+    gap: 12px;
+    max-width: 80%;
+}
+
+.bot-message {
+    align-self: flex-start;
+}
+
+.user-message {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.message-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.bot-message .message-avatar {
+    background: #667eea;
+}
+
+.user-message .message-avatar {
+    background: #64748b;
+    color: white;
+}
+
+.message-content {
+    background: #f1f5f9;
+    padding: 16px 20px;
+    border-radius: 18px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.user-message .message-content {
+    background: #667eea;
+    color: white;
+}
+
+.message-content p {
+    margin-bottom: 8px;
+}
+
+.message-content p:last-child {
+    margin-bottom: 0;
+}
+
+.chat-input-container {
+    padding: 30px;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.chat-input-wrapper {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#chatInput {
+    flex: 1;
+    padding: 16px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#chatInput:focus {
+    border-color: #667eea;
+}
+
+.send-button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-button:hover {
+    background: #5a67d8;
+}
+
+.send-button:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+}
+
+.chat-suggestions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.suggestion-btn {
+    background: white;
+    border: 2px solid #e2e8f0;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #64748b;
+}
+
+.suggestion-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+    background: #f8fafc;
+}
+
+/* Стили для форматированного текста в сообщениях */
+.message-content h1,
+.message-content h2,
+.message-content h3 {
+    margin: 10px 0 5px 0;
+    color: #2c3e50;
+}
+
+.message-content h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.message-content strong {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.message-content em {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+.message-content li {
+    margin: 5px 0;
+    padding-left: 10px;
+    list-style: none;
+    position: relative;
+}
+
+.message-content li:before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: -10px;
+}
+
+.typing-indicator {
+    opacity: 0.7;
+}
+
+.typing-dots {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.typing-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #667eea;
+    animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-dots span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.typing-dots span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes typing {
+    0%, 80%, 100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for chat */
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Experience Visualization */
+.experience-visualization {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.experience-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.experience-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.experience-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    line-height: 1.3;
+}
+
+/* МОБИЛЬНАЯ АДАПТАЦИЯ */
+
+/* Планшеты и маленькие десктопы */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-visuals {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 600px;
+    }
+    
+    .chat-title {
+        font-size: 2rem;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    /* Общие стили */
+    .container {
+        padding: 0 10px;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        min-height: auto;
+        padding: 40px 0 60px;
+    }
+    
+    .hero-section .container {
+        gap: 40px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem; /* было 2.2rem */
+        line-height: 1.2;
+        margin-bottom: 12px; /* было 16px */
+    }
+    
+    
+    .hero-subtitle {
+        font-size: 0.95rem; /* было 1.1rem */
+        margin-bottom: 25px; /* было 30px */
+    }
+    
+    .hero-features {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    
+    .feature {
+        justify-content: center;
+    }
+    
+    .cta-button {
+        padding: 16px 28px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Hero Visuals */
+    .hero-visuals {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .hero-visual {
+        padding: 20px;
+        min-height: 120px;
+    }
+    
+    /* Debt Visualization */
+    .debt-visualization {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .debt-amount {
+        font-size: 1.3rem;
+    }
+    
+    .arrow {
+        transform: rotate(90deg);
+        font-size: 1.2rem;
+    }
+    
+    /* Experience & Guarantee */
+    .experience-visualization,
+    .guarantee-visualization {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .experience-icon,
+    .guarantee-icon {
+        font-size: 2.5rem;
+    }
+    
+    .experience-title,
+    .guarantee-title {
+        font-size: 1rem;
+    }
+    
+    .experience-subtitle,
+    .guarantee-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    /* Chat Section */
+    .chat-section {
+        padding: 40px 0;
+    }
+    
+    .chat-header {
+        margin-bottom: 30px;
+    }
+    
+    .chat-title {
+        font-size: 1.6rem; /* было 1.8rem */
+        margin-bottom: 10px; /* было 12px */
+    }
+    
+    .chat-subtitle {
+        font-size: 0.9rem; /* было 1rem */
+        padding: 0 10px;
+    }
+    
+    /* Chat Window */
+    .chat-window {
+        border-radius: 15px;
+        margin: 0 5px;
+    }
+    
+    .chat-messages {
+        height: 450px; /* увеличено с 400px */
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    
+    .message {
+        max-width: 90%;
+        gap: 8px;
+    }
+    
+    .message-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .message-content {
+        padding: 12px 16px;
+        border-radius: 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Chat Input */
+    .chat-input-container {
+        padding: 20px 15px;
+    }
+    
+    .chat-input-wrapper {
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    
+    #chatInput {
+        padding: 14px 16px;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+    
+    .send-button {
+        padding: 14px;
+        border-radius: 10px;
+        min-width: 46px;
+    }
+    
+    /* Suggestions */
+    .chat-suggestions {
+        gap: 8px;
+    }
+    
+    .suggestion-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        border-radius: 15px;
+        flex: 1;
+        min-width: 0;
+        text-align: center;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6rem; /* было 1.9rem */
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem; /* было 1rem */
+    }
+    
+    .chat-title {
+        font-size: 1.4rem; /* было 1.6rem */
+    }
+    
+    .chat-messages {
+        height: 400px; /* увеличено с 350px */
+        padding: 15px 10px;
+    }
+    
+    .message-content {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .chat-input-container {
+        padding: 15px 10px;
+    }
+    
+    .chat-suggestions {
+        flex-direction: column;
+    }
+    
+    .suggestion-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Форматированный текст в сообщениях */
+    .message-content h3 {
+        font-size: 1rem;
+        margin: 8px 0 4px 0;
+    }
+    
+    .message-content li {
+        margin: 3px 0;
+        padding-left: 8px;
+        font-size: 0.85rem;
+    }
+    
+    .message-content li:before {
+        left: -8px;
+    }
+}
+
+/* Ландшафтная ориентация на мобильных */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: 30px 0 40px;
+    }
+    
+    .hero-section .container {
+        gap: 30px;
+    }
+    
+    .chat-messages {
+        height: 300px;
+    }
+}
+
+/* Улучшения для сенсорных устройств */
+@media (hover: none) and (pointer: coarse) {
+    .cta-button,
+    .send-button,
+    .suggestion-btn {
+        min-height: 44px;
+    }
+    
+    #chatInput {
+        min-height: 44px;
+    }
+    
+    .suggestion-btn {
+        padding: 12px 16px;
+    }
+}
