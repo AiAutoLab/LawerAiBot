@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БанкротПро - Списание долгов и банкротство физических лиц</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Главный блок -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Освободитесь от долгов
+                    <span class="highlight">законно и навсегда</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Профессиональная помощь в банкротстве физических лиц. 
+                    Списываем долги от 300 000 рублей с гарантией результата.
+                </p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <div class="feature-icon">⚖️</div>
+                        <span>100% законно</span>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🛡️</div>
+                        <span>Гарантия результата</span>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">⏱️</div>
+                        <span>От 6 месяцев</span>
+                    </div>
+                </div>
+                <button class="cta-button" onclick="scrollToChat()">
+                    Получить бесплатную консультацию
+                </button>
+            </div>
+            
+            <!-- Три блока с преимуществами -->
+            <div class="hero-visuals">
+                <div class="hero-visual">
+                    <div class="debt-visualization">
+                        <div class="debt-before">
+                            <span class="debt-amount">2,5 млн ₽</span>
+                            <span class="debt-label">Ваши долги</span>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="debt-after">
+                            <span class="debt-amount">0 ₽</span>
+                            <span class="debt-label">После банкротства</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="experience-visualization">
+                        <div class="experience-icon">📊</div>
+                        <div class="experience-text">
+                            <span class="experience-title">Опыт 10+ лет</span>
+                            <span class="experience-subtitle">Более 500 успешных дел по банкротству</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="guarantee-visualization">
+                        <div class="guarantee-icon">🏆</div>
+                        <div class="guarantee-text">
+                            <span class="guarantee-title">Гарантия успеха</span>
+                            <span class="guarantee-subtitle">Вернем деньги, если не спишем долги</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок чат-бота -->
+    <section class="chat-section" id="chat-section">
+        <div class="container">
+            <div class="chat-header">
+                <h2 class="chat-title">Бесплатная консультация с ИИ-юристом</h2>
+                <p class="chat-subtitle">
+                    Получите персональную оценку вашей ситуации и узнайте, 
+                    подходит ли вам процедура банкротства
+                </p>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-window">
+                    <div class="chat-messages" id="chatMessages">
+                        
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <div class="chat-input-wrapper">
+                            <input 
+                                type="text" 
+                                id="chatInput" 
+                                placeholder="Напишите ваш вопрос..." 
+                                maxlength="500"
+                            >
+                            <button id="sendButton" class="send-button">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="chat-suggestions">
+                            <button class="suggestion-btn" onclick="sendSuggestion('У меня долги 800 000 рублей')">
+                                У меня долги 800 000 рублей
+                            </button>
+                            <button class="suggestion-btn" onclick="sendSuggestion('Могу ли я сохранить квартиру?')">
+                                Могу ли я сохранить квартиру?
+                            </button>
+                            <button class="suggestion-btn" onclick="sendSuggestion('Сколько длится процедура?')">
+                                Сколько длится процедура?
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
