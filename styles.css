@@ -755,7 +755,7 @@ html {
     }
     
     .chat-messages {
-        height: 400px; /* увеличено с 350px */
+        height: 600px; /* увеличено с 350px */
         padding: 15px 10px;
     }
     
